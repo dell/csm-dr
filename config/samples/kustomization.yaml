@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+  - dr_v1_volumejournal.yaml
+  # +kubebuilder:scaffold:manifestskustomizesamples

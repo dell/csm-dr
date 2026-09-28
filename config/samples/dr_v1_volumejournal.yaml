@@ -1,0 +1,20 @@
+apiVersion: dr.storage.dell.com/v1
+kind: VolumeJournal
+metadata:
+  labels:
+    app.kubernetes.io/name: csm-dr
+    app.kubernetes.io/managed-by: kustomize
+  name: volumejournal-sample
+spec:
+  volumeHandle: volume1
+  volumeUUID: 123e4567-e89b-12d3-a456-426655440000
+  sourceCluster: cluster1
+  targetCluster: cluster2
+  originalArray: array1
+  failoverArray: array2
+  journalEntries:
+    - operation: "TestOperation"
+      host: "node1"
+      array: "array1"
+      time: "2022-01-01T00:00:00Z"
+      status: "pending-reconciliation"
